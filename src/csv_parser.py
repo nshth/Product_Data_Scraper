@@ -9,7 +9,6 @@ product_list = []
 
 def parse_csv():
     products = pd.read_csv('data/input/demo.csv', quotechar='"')
-    product_list = []
     
     for _, product in products.iterrows():
         product_link = product['Product_link']
