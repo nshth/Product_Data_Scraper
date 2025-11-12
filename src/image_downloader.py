@@ -64,7 +64,6 @@ def scrape_image(url, headless=True):
         #     found = re.findall(r"https?:\/\/[^\s'\"\\<>]+?\.(?:jpg|jpeg|png|webp)", html)
         #     img_urls = list(dict.fromkeys(found))  # unique preserving order
 
-        # explain
         img_urls = [normalize_url(u) for u in img_urls if u]
         img_urls = list(dict.fromkeys(img_urls)) # unique URLs
         img_urls = [u for u in img_urls if u and u.startswith("http")]
