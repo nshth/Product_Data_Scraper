@@ -27,7 +27,7 @@ def main():
         if html_content:
             print(f"Successfully fetched HTML content")
             soup_object = parse_with_beautifulsoup(html_content)
-            print(soup_object)
+            data = soup_object
         else:
             print(f"Failed to fetch HTML content")
 
@@ -39,6 +39,8 @@ def main():
             path = download_image(img, folder_path, name_prefix=f"product_img_{i+1}")
             if path:
                 print("Saved to", path)
+
+        
 
 if __name__ == "__main__":
     main()
